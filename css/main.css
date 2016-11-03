@@ -1,0 +1,40 @@
+body {
+    font-family: 'Abril Fatface', cursive;
+    background: url("https://images.alphacoders.com/249/249741.jpg");
+    background-size: 100%;
+}
+
+/* hide the results by default */
+#results, #details {
+    display: none;
+}
+
+section {
+    background: rgba(60, 124, 117, 0.5);
+    margin: auto;
+    max-width: 500px;
+    padding: 60px;
+    border-radius: 10px;
+    color: white;
+}
+
+/* select the img width and id="logo" */
+img#logo {
+    margin: auto;
+    width: 100%;
+    display: block;
+    
+}
+
+/* apply the following styles to both the select and the button elements... notice the comma in between them */
+select, button {
+    width: 100%;
+    background: white;
+    color: black;
+    font-size: 200%;
+}
+
+button {
+    border: none;
+    
+}

@@ -11,12 +11,16 @@
         <!-- Place favicon.ico in the root directory -->
 
         <link rel="stylesheet" href="css/normalize.css">
+        <link href="https://fonts.googleapis.com/css?family=Unna" rel="stylesheet">
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.28.0/mapbox-gl.css' rel='stylesheet' />
         <link rel="stylesheet" href="css/main.css">
+        
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         
-        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+        
     </head>
     <body>
+        <div class="scene">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -29,21 +33,25 @@
             <img id="logo" src="img/logo.png">
         <h1>I want to find ghosts in...</h1>
         <select>
-            <option value="SouthEast">South East</option>
+            <option value="South East">South East</option>
             <option value="London">London</option>
-            <option value="NorthWest">North West</option>
-            <option value="EastofEngland">East of England</option>
-            <option value="WestMidlands">West Midlands</option>
-            <option value="SouthWest">South West</option>
-            <option value="Yorkshire">Yorkshire and the Humber</option>
-            <option value="EastMidlands">East Midlands</option>
-            <option value="NorthEast">North East</option>
+            <option value="North West">North West</option>
+            <option value="East of England">East of England</option>
+            <option value="West Midlands">West Midlands</option>
+            <option value="South West">South West</option>
+            <option value="Yorkshire and the Humber">Yorkshire and the Humber</option>
+            <option value="East Midlands">East Midlands</option>
+            <option value="North East">North East</option>
             </select>
             <button>Go</button>
         </section>
+        
+        
+        
 <!--        results section -->
         <section id="results">
             <a class="back button">Back</a>
+            <a class="toggle button">Map</a>
         <h1>Here are the following venues that could wet your ghost-hunting appetite...</h1>
             <ol>
             <li>
@@ -71,6 +79,8 @@
                 <p>Bakes and stuff.</p></div>
                 </li>
             </ol>
+            
+            <div id="map"></div>
             </section>
 <!--        details -->
         <section id="details">
@@ -86,13 +96,21 @@
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
+        <!-- Load Mapbox JS -->
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.28.0/mapbox-gl.js'></script>
+        <script src="js/mapbox.js"></script>
         <!-- Load Firebase library -->
         <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
         <script src="js/firebase.js"></script>
+        <script src= "js/geolocate.js"></script>
+        <!-- Own scripts -->
         <script src="js/filter.js"></script>
         <script src="js/show.js"></script>
+        
+<!--        Main.JS is the script that binds them all-->
+<!--        It needs to be loaded after all the others-->
         <script src="js/main.js"></script>
-
+            
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <!--
         <script>
@@ -104,5 +122,7 @@
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
 -->
+        
+        </div>
     </body>
 </html>

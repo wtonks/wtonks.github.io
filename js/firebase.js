@@ -18,9 +18,9 @@ var venuesList = []; // empty list, for now
 
 // load all the children of "people"
 // keep listening for new children
-peopleData.on('child_added', function(childData){
+venuesData.on('child_added', function(childData){
     // run these instructiion for each child
-    console.table(childData.val());
+    //console.table(childData.val());
     var person = childData.val(); //extract data about the person
-    peopleList.push( childData.val() ); //add the peron to the peopleList
+    venuesList.push( childData.val() ); //add the peron to the venuesList
  })
